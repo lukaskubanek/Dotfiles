@@ -1,46 +1,31 @@
-# Path to your oh-my-zsh configuration.
-ZSH=$HOME/.oh-my-zsh
+#              __                                     __
+#       ____  / /_     ____ ___  __  __   ____  _____/ /_
+#      / __ \/ __ \   / __ `__ \/ / / /  /_  / / ___/ __ \
+#     / /_/ / / / /  / / / / / / /_/ /    / /_(__  ) / / /
+#     \____/_/ /_/  /_/ /_/ /_/\__, /    /___/____/_/ /_/
+#                             /____/
+#    
+#                   Oh My ZSH Configuration
+#          https://github.com/robbyrussell/oh-my-zsh
 
-# Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-ZSH_THEME="aqua"
+ZSH=$HOME/.oh-my-zsh # path to the configuration
+ZSH_THEME="solar-panels" # custom theme
+DISABLE_UPDATE_PROMPT="true" # enable automatic updates without prompting
+COMPLETION_WAITING_DOTS="true" # enable red dots to be displayed while waiting for completion
 
-# Example aliases
-alias zshconfig="mate ~/.zshrc"
-alias ohmyzsh="mate ~/.oh-my-zsh"
-
-# Update without prompting
-DISABLE_UPDATE_PROMPT=true
-
-# Comment this out to disable weekly auto-update checks
-# DISABLE_AUTO_UPDATE="true"
-
-# Uncomment following line if you want to disable autosetting terminal title.
-# DISABLE_AUTO_TITLE="true"
-
-# Uncomment following line if you want red dots to be displayed while waiting for completion
-COMPLETION_WAITING_DOTS="true"
-
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-plugins=(git git-flow rvm gem cap brew forklift osx)
+# enabled plugins stored in ~/.oh-my-zsh/plugins/
+plugins=(git git-flow rvm gem cap brew forklift)
 
 # `cd` replacement for projects (taken from https://coderwall.com/p/feoi0a)
-pr() {
+wo() {
   code_dir=~/Projects
   cd $(find $code_dir -type d -maxdepth 3 | grep -i $* | grep -Ev Pods/ --max-count=1)
 }
 
-# Homebrew
-export PATH=/usr/local/bin:$PATH
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # load RVM
 
-# RVM
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+export PATH=/usr/local/bin:$PATH # add Homebrew binaries to the path
+export PATH=$PATH:$HOME/.rvm/bin # add gem binaries to the path
+export PATH=$PATH:/usr/texbin # add Latex binaries to the path
 
-# Latex
-export PATH=$PATH:/usr/texbin
-
-# Load Oh My ZSH
-source $ZSH/oh-my-zsh.sh
-
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+source $ZSH/oh-my-zsh.sh # and finally load Oh My ZSH
