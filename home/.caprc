@@ -1,0 +1,12 @@
+require 'capistrano_colors'
+
+capistrano_color_matchers = [
+  { :match => /executing `.*/,              :color => :black, :level => 2,  :prio => -5,  :attribute => :reverse, :prepend => "==> Currently " },
+  { :match => /.*/,                         :color => :black, :level => 2,  :prio => -15, :attribute => :bright },
+  { :match => /servers:|executing command|rvm_path=\/usr\/local\/rvm/,  :color => :hide,  :prio => 10 },
+  { :match => /sftp upload complete/,       :color => :black,               :prio => 15,  :prepend => "✔ " },
+  { :match => /command finished/,           :color => :green,               :prio => 10,  :prepend => "✔ " },
+  { :match => /^transaction.*|triggering/,  :color => :cyan,                :prio => 10,  :attribute => :reverse, :prepend => "==> " },
+]
+ 
+colorize( capistrano_color_matchers )

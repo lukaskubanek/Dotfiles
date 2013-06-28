@@ -1,0 +1,27 @@
+[core]
+    editor = nano
+    excludesfile = ~/.gitignore
+[user]
+    name = Lukas Kubanek
+    email = lukas.kubanek@me.com
+[alias]
+    x = !gitx
+    a = add
+    c = commit
+    s = status
+    d = diff
+    co = checkout
+    cb = checkout -b
+    discard = reset --hard HEAD
+    unstage = reset HEAD --
+    last = log -1 HEAD
+    tags = tag -l
+    branches = branch -a
+    remotes = remote -v
+    users = !git log --all --format='%aN' | sort -u
+    aliases = !git config --get-regexp 'alias.*' | colrm 1 6 | sed 's/[ ]/ = /'
+    report = log --graph --pretty=format:'%C(blue)\t%h %C(reset)%C(red)%C(bold)%d%C(reset) %s %Cgreen(%an | %cr) %C(reset)' -15
+[color]
+    ui = auto
+[push]
+	default = matching
