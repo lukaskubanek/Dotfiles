@@ -1,0 +1,5 @@
+PATH=/usr/local/bin:$PATH # add Homebrew binaries
+PATH=$PATH:$HOME/.rvm/bin # add gem binaries
+PATH=$PATH:/usr/texbin # add Latex binaries
+
+export PATH

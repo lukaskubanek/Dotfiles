@@ -1,0 +1,1 @@
+alias show_library="chflags nohidden $HOME/Library/"

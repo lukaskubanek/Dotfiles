@@ -1,0 +1,5 @@
+# `cd` replacement for projects (taken from https://coderwall.com/p/feoi0a)
+wo() {
+  code_dir=~/Projects
+  cd $(find $code_dir -type d -maxdepth 3 | grep -i $* | grep -Ev Pods/ --max-count=1)
+}

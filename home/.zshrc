@@ -16,16 +16,14 @@ COMPLETION_WAITING_DOTS="true" # enable red dots to be displayed while waiting f
 # enabled plugins stored in ~/.oh-my-zsh/plugins/
 plugins=(git git-flow rvm gem cap brew forklift)
 
-# `cd` replacement for projects (taken from https://coderwall.com/p/feoi0a)
-wo() {
-  code_dir=~/Projects
-  cd $(find $code_dir -type d -maxdepth 3 | grep -i $* | grep -Ev Pods/ --max-count=1)
-}
+# load other shell dotfiles
+for file in ~/.{aliases,functions,path}; do
+	[ -r "$file" ] && source "$file"
+done
+unset file
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # load RVM
+# load RVM
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 
-export PATH=/usr/local/bin:$PATH # add Homebrew binaries to the path
-export PATH=$PATH:$HOME/.rvm/bin # add gem binaries to the path
-export PATH=$PATH:/usr/texbin # add Latex binaries to the path
-
-source $ZSH/oh-my-zsh.sh # and finally load Oh My ZSH
+# and finally load Oh My ZSH
+source $ZSH/oh-my-zsh.sh
