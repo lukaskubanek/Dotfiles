@@ -57,3 +57,11 @@ update-cocoapods() {
     fi
     unset $current_gemset
 }
+
+# fix the bug with "Open With" duplicated
+# taken from https://github.com/aziz/dotfiles/blob/master/bash/aliases/osx.aliases.bash
+fix-open-with-duplicates() {
+    /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/Support/lsregister -kill -r -domain local -domain user
+    killall Finder
+    echo '"Open With" has been rebuilt, Finder will relaunch.'
+}
