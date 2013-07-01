@@ -41,3 +41,19 @@ xcode() {
         set counter += 1
     done
 }
+
+# switch to objective-c gemset if necessary and update cocoapods
+objective_c_gemset="objective-c"
+update-cocoapods() {
+    current_gemset=$(rvm gemset name);
+    if [ $current_gemset != $objective_c_gemset ]; then
+        rvm gemset use objective-c
+    fi
+    
+    gem update cocoapods
+    
+    if [ $current_gemset != $objective_c_gemset ]; then
+        rvm gemset use $current_gemset
+    fi
+    unset $current_gemset
+}
