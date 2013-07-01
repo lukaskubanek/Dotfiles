@@ -1,3 +1,4 @@
 alias reload-zsh="source $HOME/.zshrc"
 alias show-library="chflags nohidden $HOME/Library/"
 alias update-rvm="rvm get latest --auto-dotfiles"
+alias update-homebrew="brew update; brew upgrade; brew doctor"
