@@ -1,2 +1,2 @@
-alias reload_zsh="source $HOME/.zshrc"
-alias show_library="chflags nohidden $HOME/Library/"
+alias reload-zsh="source $HOME/.zshrc"
+alias show-library="chflags nohidden $HOME/Library/"
