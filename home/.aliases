@@ -2,3 +2,10 @@ alias reload-zsh="source $HOME/.zshrc"
 alias show-library="chflags nohidden $HOME/Library/"
 alias update-rvm="rvm get latest --auto-dotfiles"
 alias update-homebrew="brew update; brew upgrade; brew doctor"
+
+# tree improvements
+# take from https://github.com/aziz/dotfiles/blob/master/bash/aliases/general.aliases.bash
+if [ -x "$(which tree)" ]
+then
+  alias tree="tree -CAFa -I 'CVS|*.*.package|.svn|.git' --dirsfirst"
+fi
