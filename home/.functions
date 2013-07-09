@@ -7,7 +7,7 @@ wo() {
 
 # quickly open Xcode projects and workspaces
 # taken from https://github.com/asmallteapot/dotfiles/blob/master/zsh-alias
-xcode_path="/Applications/Xcode5-DP2.app"
+xcode_path="/Applications/Xcode5-DP3.app"
 xcode() {
     # get an array of .xcworkspace and .xcodeproj files
     workspaces=(`ls -d1 *.(xcworkspace|xcodeproj) | sed -e "s/\///g"`) &> /dev/null
