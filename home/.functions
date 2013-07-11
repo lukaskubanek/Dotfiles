@@ -1,8 +1,12 @@
 # `cd` replacement for projects
 # taken from https://coderwall.com/p/feoi0a
+code_dir="$HOME/Projects"
 wo() {
-  code_dir=~/Projects
-  cd $(find $code_dir -type d -maxdepth 3 | grep -i $* | grep -Ev Pods/ --max-count=1)
+    if [ -z $* ]; then
+        echo "Please provide the name of the project you want to work on."
+        return;
+    fi
+    cd $(find $code_dir -type d -maxdepth 3 | grep -i $* | grep -Ev Pods/ --max-count=1)
 }
 
 # quickly open Xcode projects and workspaces
