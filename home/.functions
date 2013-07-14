@@ -40,9 +40,9 @@ xcode() {
     # present a list of projects/workspaces, de-duped by name
     counter=1
     echo "Multiple choice currently isn't enabled. Available workspaces:"
-    for workspace in workspaces; do
+    for workspace in $workspaces; do
         echo "$counter. $workspace"
-        set counter += 1
+        ((counter++))
     done
 }
 
