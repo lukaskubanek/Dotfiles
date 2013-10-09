@@ -69,3 +69,13 @@ fix-open-with-duplicates() {
     killall Finder
     echo '"Open With" has been rebuilt, Finder will relaunch.'
 }
+
+# prints a list of the longest Objective-C implementation files in a project
+# presented by Chris Eidhof at Macoun 2013
+# here is an article about this topic: http://chris.eidhof.nl/post/43925321331/how-to-keep-your-classes-small-and-clean
+list-implementation-files() {
+    find . -path "./Pods" -prune -o \
+           -path "./Tests" -prune -o \
+           -path "./Dependencies" -prune -o \
+           -name "*.m" -exec wc -l "{}" \; | sort -n
+}
