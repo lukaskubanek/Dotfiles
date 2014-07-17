@@ -1,2 +1,11 @@
 *~
 .DS_Store
+xcuserdata
+.svn
+.hg
+*.swp
+*.swo
+*.o
+*.hi
+*.ho
+.rbenv-version
