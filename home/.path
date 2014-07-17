@@ -1,6 +1,15 @@
-PATH=/usr/local/bin:$PATH # add Homebrew binaries
-PATH=$PATH:/usr/local/share/npm/bin # add node.js binaries
-PATH=$PATH:$HOME/.rvm/bin # add gem binaries
-PATH=$PATH:/usr/texbin # add Latex binaries
+# PATH Settings
+
+# Add Homebrew binaries
+PATH=/usr/local/bin:$PATH
+
+# Add node.js binaries
+PATH=$PATH:/usr/local/share/npm/bin
+
+# Add Ruby gems binaries
+PATH=$PATH:$HOME/.rvm/bin
+
+# Add Latex binaries
+PATH=$PATH:/usr/texbin
 
 export PATH

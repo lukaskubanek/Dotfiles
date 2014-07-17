@@ -1,10 +1,19 @@
+# Aliases
+
+# Reload ZSH settings
 alias reload-zsh="source $HOME/.zshrc"
+
+# Unhide the ~/Library folder
 alias show-library="chflags nohidden $HOME/Library/"
+
+# Update RVM installation
 alias update-rvm="rvm get latest --auto-dotfiles"
+
+# Update Homebrew installation
 alias update-homebrew="brew update; brew upgrade; brew doctor"
 
-# tree improvements
-# take from https://github.com/aziz/dotfiles/blob/master/bash/aliases/general.aliases.bash
+# List the files and folders as a tree
+# (taken from https://github.com/aziz/dotfiles/blob/master/bash/aliases/general.aliases.bash)
 if [ -x "$(which tree)" ]
 then
   alias tree="tree -CAFa -I 'CVS|*.*.package|.svn|.git' --dirsfirst"

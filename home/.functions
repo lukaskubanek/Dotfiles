@@ -1,5 +1,7 @@
+# Functions
+
 # `cd` replacement for projects
-# taken from https://coderwall.com/p/feoi0a
+# (taken from https://coderwall.com/p/feoi0a)
 code_dir="$HOME/Projects"
 wo() {
     if [ -z $* ]; then
@@ -9,7 +11,7 @@ wo() {
     cd $(find $code_dir -type d -maxdepth 3 | grep -i $* | grep -Ev Pods/ --max-count=1)
 }
 
-# switch to objective-c gemset if necessary and update cocoapods
+# Switch to objective-c gemset if necessary and update CocoaPods
 objective_c_gemset="objective-c"
 update-cocoapods() {
     current_gemset=$(rvm gemset name);
@@ -25,17 +27,17 @@ update-cocoapods() {
     unset $current_gemset
 }
 
-# fix the bug with "Open With" duplicated
-# taken from https://github.com/aziz/dotfiles/blob/master/bash/aliases/osx.aliases.bash
+# Fix the bug with "Open With" duplicated
+# (taken from https://github.com/aziz/dotfiles/blob/master/bash/aliases/osx.aliases.bash)
 fix-open-with-duplicates() {
     /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/Support/lsregister -kill -r -domain local -domain user
     killall Finder
     echo '"Open With" has been rebuilt, Finder will relaunch.'
 }
 
-# prints a list of the longest Objective-C implementation files in a project
-# presented by Chris Eidhof at Macoun 2013
-# here is an article about this topic: http://chris.eidhof.nl/post/43925321331/how-to-keep-your-classes-small-and-clean
+# Prints a list of the longest Objective-C implementation files in a project
+# (presented by Chris Eidhof (@chriseidhof) at Macoun 2013)
+# An article about this topic: http://chris.eidhof.nl/post/43925321331/how-to-keep-your-classes-small-and-clean
 list-implementation-files() {
     find . -path "./Pods" -prune -o \
            -path "./Tests" -prune -o \
