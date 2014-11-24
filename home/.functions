@@ -1,5 +1,21 @@
 # Functions
 
+# An alternative command line prompt to the one from rbenv plugin for oh-my-zsh,
+# because its parsing of the active gemset does not work.
+# Related links:
+# - https://github.com/robbyrussell/oh-my-zsh/blob/master/plugins/rbenv/rbenv.plugin.zsh
+# - https://github.com/jf/rbenv-gemset/blob/master/libexec/rbenv-gemset-active
+rbenv_prompt_info2() {
+    current_ruby=$(rbenv version-name)
+    gemset_file=$(rbenv gemset file 2>/dev/null || true)
+    if [ -n "$gemset_file" ]; then
+        current_gemset=$(cat "$gemset_file")
+        echo "$current_ruby@$current_gemset"
+    else
+        echo "$current_ruby"
+    fi
+}
+
 # `cd` replacement for projects
 # (taken from https://coderwall.com/p/feoi0a)
 code_dir="$HOME/Projects"

@@ -15,13 +15,16 @@ DISABLE_UPDATE_PROMPT="true"        # enable automatic updates without prompting
 COMPLETION_WAITING_DOTS="true"      # enable red dots to be displayed while waiting for completion
 
 # enabled plugins stored in ~/.oh-my-zsh/plugins/
-plugins=(git git-flow gem cap brew forklift)
+plugins=(git git-flow rbenv gem cap brew forklift)
 
 # load other shell dotfiles
 for file in $HOME/.{aliases,functions,path}; do
 	[ -r "$file" ] && source "$file"
 done
 unset file
+
+# load rbenv
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 # and finally load Oh My ZSH
 source $ZSH/oh-my-zsh.sh
