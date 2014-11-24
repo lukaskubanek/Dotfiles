@@ -6,9 +6,6 @@ alias reload-zsh="source $HOME/.zshrc"
 # Unhide the ~/Library folder
 alias show-library="chflags nohidden $HOME/Library/"
 
-# Update RVM installation
-alias update-rvm="rvm get latest --auto-dotfiles"
-
 # Update Homebrew installation
 alias update-homebrew="brew update; brew upgrade; brew doctor"
 

@@ -6,9 +6,6 @@ PATH=/usr/local/bin:$PATH
 # Add node.js binaries
 PATH=$PATH:/usr/local/share/npm/bin
 
-# Add Ruby gems binaries
-PATH=$PATH:$HOME/.rvm/bin
-
 # Add Latex binaries
 PATH=$PATH:/usr/texbin
 

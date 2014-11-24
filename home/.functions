@@ -11,22 +11,6 @@ wo() {
     cd $(find $code_dir -type d -maxdepth 3 | grep -i $* | grep -Ev Pods/ --max-count=1)
 }
 
-# Switch to objective-c gemset if necessary and update CocoaPods
-objective_c_gemset="objective-c"
-update-cocoapods() {
-    current_gemset=$(rvm gemset name);
-    if [ $current_gemset != $objective_c_gemset ]; then
-        rvm gemset use objective-c
-    fi
-    
-    gem update cocoapods
-    
-    if [ $current_gemset != $objective_c_gemset ]; then
-        rvm gemset use $current_gemset
-    fi
-    unset $current_gemset
-}
-
 # Fix the bug with "Open With" duplicated
 # (taken from https://github.com/aziz/dotfiles/blob/master/bash/aliases/osx.aliases.bash)
 fix-open-with-duplicates() {
