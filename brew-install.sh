@@ -41,6 +41,7 @@ packages=(
     # Git
     git
     git-flow
+    icdiff        # diff tool
     tig           # command-line text-mode interface for Git
     gource        # software version control visualization tool
     bfg           # removes large or troublesome blobs like git-filter-branch does, but faster
