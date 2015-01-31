@@ -38,7 +38,7 @@ GEM
     colorize (0.7.5)
     escape (0.0.4)
     fuzzy_match (2.0.4)
-    homesick (0.9.2)
+    homesick (1.1.2)
       thor (>= 0.14.0)
     i18n (0.7.0)
     jazzy (0.1.0)
@@ -69,7 +69,7 @@ GEM
       clamp (~> 0.6)
       colorize (~> 0.7)
       xcodeproj (~> 0.17)
-    thor (0.18.1)
+    thor (0.19.1)
     thread_safe (0.3.4)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
@@ -82,7 +82,7 @@ PLATFORMS
 
 DEPENDENCIES
   cocoapods
-  homesick
+  homesick (~> 1.1)
   jazzy
   rake
   synx
