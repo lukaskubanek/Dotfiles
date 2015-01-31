@@ -13,19 +13,19 @@ This repository contains following personal configuration files:
 
 The following guide describes how to apply this configuration while setting up an OS X computer from scratch.
 
-##### Step 1: Oh My ZSH
+#### Step 1: [Oh My ZSH](https://github.com/robbyrussell/oh-my-zsh)
 
 ```bash
 curl -L http://install.ohmyz.sh | sh
 ```
 
-##### Step 2: Homebrew
+#### Step 2: [Homebrew](http://brew.sh)
 
 ```bash
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
-##### Step 3: Homebrew Packages
+#### Step 3: Homebrew Packages
 
 ```bash
 ./brew-install.sh
@@ -35,14 +35,14 @@ brew cleanup
 brew prune
 ```
 
-##### Step 4: Ruby
+#### Step 4: Ruby using [rbenv](https://github.com/sstephenson/rbenv)
 
 ```bash
 rbenv install 2.0.0-p195
 rbenv global 2.0.0-p195
 ```
 
-##### Step 5: Bundler & Gems
+#### Step 5: [Bundler](http://bundler.io) & Gems
 
 ```bash
 gem install bundle
@@ -50,7 +50,7 @@ bundle install
 rbenv rehash
 ```
 
-##### Step 6: Symlinking Dotfiles using Homesick
+#### Step 6: Symlinking Dotfiles using [Homesick](https://github.com/technicalpickles/homesick)
 
 ```bash
 homesick clone $(pwd)
@@ -60,11 +60,11 @@ reload-zsh
 
 *Note: The first command creates a symlink from `~/.homesick/repos/Configuration` to the local copy of this repository. When updating the dotfiles, the changes are actually made to that local repository.*
 
-##### Step 7: Terminal Theme
+#### Step 7: Terminal Theme
 
 Import `Solar Panels.terminal` in the Terminal’s preferences.
 
-##### Step 8: Keyboard Layouts
+#### Step 8: Keyboard Layouts
 
 First copy the keyboard layouts from this repository to `~/Library/Keyboard Layouts` using following script:
 
