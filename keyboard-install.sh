@@ -6,5 +6,5 @@ TARGET_DIR="${HOME}/Library/Keyboard Layouts"
 
 find "${SOURCE_DIR}" -type f | while read filepath; do
     filename=$(basename "${filepath}")
-    ln -s "${SOURCE_DIR}/${filename}" "${TARGET_DIR}/${filename}"
+    cp "${SOURCE_DIR}/${filename}" "${TARGET_DIR}"
 done
