@@ -11,7 +11,6 @@ brew 'libxslt'
 
 brew 'rbenv'
 brew 'ruby-build'    # rbenv plugin that provides an rbenv install command for compiling different versions of Ruby
-brew 'rbenv-gemset'  # missing gemset management for rbenv
 
 # Development
 
