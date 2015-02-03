@@ -40,8 +40,23 @@ rbenv global 2.0.0-p195
 
 #### Step 5: [Bundler](http://bundler.io) & Gems
 
+Since `rbenv` is not yel loaded using `.zshrc` it is necessary to load it manually in the shell:
+
+```
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+export PATH="~/.rbenv/shims:$PATH"
+```
+
+Install Bundler:
+
 ```bash
-gem install bundle
+gem install bundler
+rbenv rehash
+```
+
+And finally install gems from the Gemfile in this repository.
+
+```bash
 bundle install
 rbenv rehash
 ```
@@ -51,7 +66,7 @@ rbenv rehash
 ```bash
 homesick clone $(pwd)
 homesick symlink Configuration
-reload-zsh
+source ~/.zshrc
 ```
 
 *Note: The first command creates a symlink from `~/.homesick/repos/Configuration` to the local copy of this repository. When updating the dotfiles, the changes are actually made to that local repository.*
