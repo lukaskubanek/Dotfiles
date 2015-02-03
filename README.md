@@ -29,10 +29,6 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 
 ```bash
 ./brew-install.sh
-./cast-install.sh
-brew linkapps
-brew cleanup
-brew prune
 ```
 
 #### Step 4: Ruby using [rbenv](https://github.com/sstephenson/rbenv)
