@@ -73,7 +73,7 @@ source ~/.zshrc
 
 #### Step 7: Terminal Theme
 
-Import `Solar Panels.terminal` in the Terminal’s preferences.
+Install the font `Menlo for Powerline` e.g. from this [Gist](https://gist.github.com/sjl/1627888#file-menlo-forpowerline-ttc-zip) and import `Solar Panels.terminal` in the Terminal’s preferences.
 
 #### Step 8: Keyboard Layouts
 
