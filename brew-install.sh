@@ -110,6 +110,10 @@ cask_packages=(
     quicklook-csv
     qlimagesize
     suspicious-package
+	
+	# Color Pickers
+	colorpicker-developer
+	colorpicker-hex
 
 )
 
