@@ -54,7 +54,7 @@ gem install bundler
 rbenv rehash
 ```
 
-And finally install gems from the Gemfile in this repository.
+And finally install gems from the Gemfile in this repository. Make sure Xcode is installed, because some brews may depend on it.
 
 ```bash
 bundle install
