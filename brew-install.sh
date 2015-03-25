@@ -84,13 +84,14 @@ brew_packages=(
     tree          	# recursive directory listing command
     trash         	# small command-line program for OS X that moves files or folders to the trash
     dos2unix      	# DOS to Unix text file format converter
-    peco/peco/peco 	# simplistic interactive filtering tool
+    peco         	# simplistic interactive filtering tool
     youtube-dl    	# small command-line program to download videos from YouTube.com
     s3cmd         	# Amazon S3 command-line client
     gnupg         	# GPG
 
     # Fun Stuff
     cmatrix       	# little command line program which shows the scrolling lines from 'The Matrix'
+    cowsay
 
 )
 
