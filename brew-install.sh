@@ -115,6 +115,9 @@ cask_packages=(
 	# Color Pickers
 	colorpicker-developer
 	colorpicker-hex
+    
+    # Others
+    wkhtmltopdf
 
 )
 
