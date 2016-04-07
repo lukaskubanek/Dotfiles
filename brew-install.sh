@@ -53,6 +53,8 @@ brew_packages=(
     ruby-build    # rbenv plugin that provides an rbenv install command for compiling different versions of Ruby
 
     # Development
+    carthage
+    lcov            # tool for counting lines of code
     cloc          	# tool for counting lines of code
     class-dump    	# command-line utility for examining the Objective-C runtime information
     mogenerator   	# Core Data code generator
@@ -64,7 +66,9 @@ brew_packages=(
     icdiff        	# diff tool
     tig           	# command-line text-mode interface for Git
     gource        	# software version control visualization tool
-    bfg           	# removes large or troublesome blobs like git-filter-branch does, but faster
+    
+    # Security
+    keybase
 
     # Compilers
     gcc
