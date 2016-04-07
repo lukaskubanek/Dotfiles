@@ -5,8 +5,3 @@ gem "homesick", "~> 1.1"
 
 # Utilities
 gem "rake"
-
-# Development
-gem "cocoapods"
-gem "jazzy"
-gem "synx"
