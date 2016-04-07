@@ -36,3 +36,11 @@
 	smudge = git-media-smudge %f
 [help]
 	autocorrect = 1
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true
+[credential]
+	helper = osxkeychain
+[commit]
+	gpgsign = false
