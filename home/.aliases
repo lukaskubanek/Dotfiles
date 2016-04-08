@@ -5,9 +5,6 @@
 # Reload ZSH settings
 alias reload-zsh="source $HOME/.zshrc"
 
-# Unhide the ~/Library folder
-alias show-library="chflags nohidden $HOME/Library/"
-
 # Update Homebrew installation
 alias update-homebrew="brew update; brew upgrade; brew doctor"
 

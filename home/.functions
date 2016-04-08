@@ -37,6 +37,23 @@ fix-open-with-duplicates() {
     echo '"Open With" has been rebuilt, Finder will relaunch.'
 }
 
+# Unhide the ~/Library folder
+show-library() {
+    chflags nohidden $HOME/Library/
+}
+
+# Show hidden files in Finder
+show-hidden-files() {
+    defaults write com.apple.finder AppleShowAllFiles YES
+    killall Finder
+}
+
+# Hide hidden files in Finder
+hide-hidden-files() {
+    defaults write com.apple.finder AppleShowAllFiles NO
+    killall Finder
+}
+
 # Prints a list of the longest Objective-C implementation files in a project
 # (presented by Chris Eidhof (@chriseidhof) at Macoun 2013)
 # An article about this topic: http://chris.eidhof.nl/post/43925321331/how-to-keep-your-classes-small-and-clean
