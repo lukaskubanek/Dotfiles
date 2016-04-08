@@ -1,4 +1,6 @@
-# Functions
+#############
+# Functions #
+#############
 
 # An alternative command line prompt to the one from rbenv plugin for oh-my-zsh,
 # because its parsing of the active gemset does not work.

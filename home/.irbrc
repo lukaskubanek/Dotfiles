@@ -1,8 +1,8 @@
 begin
-  # load wirble
+  # Load wirble
   require 'wirble'
 
-  # start wirble (with color)
+  # Start wirble (with color)
   Wirble.init
   Wirble.colorize
 rescue LoadError => error

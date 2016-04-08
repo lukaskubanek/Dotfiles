@@ -1,12 +1,11 @@
-# PATH Settings
+#################
+# Path Settings #
+#################
 
 # Add Homebrew binaries
 PATH=/usr/local/bin:$PATH
 
-# Add node.js binaries
-PATH=$PATH:/usr/local/share/npm/bin
-
-# Add Latex binaries
+# Add LaTeX binaries
 PATH=$PATH:/usr/texbin
 
 export PATH

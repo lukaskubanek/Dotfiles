@@ -1,4 +1,6 @@
-# Aliases
+###########
+# Aliases #
+###########
 
 # Reload ZSH settings
 alias reload-zsh="source $HOME/.zshrc"
