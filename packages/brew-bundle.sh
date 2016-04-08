@@ -5,15 +5,18 @@ print_step() {
 }
 
 print_step "> Checking if Homebrew is installed..."
-command -v brew >/dev/null 2>&1 || { 
+command -v brew >/dev/null 2>&1 || {
     echo >&2 "Homebrew is not installed, please install it first.";
     exit 1;
 }
 
+print_step "> Changing working directory to ./packages"
+cd $(dirname "$0")
+
 print_step "> Installing homebrew-bundle..."
 brew tap Homebrew/bundle
 
-print_step "> Installing packages defined in the Brewfile..."
+print_step "> Bundling packages defined in the Brewfile..."
 brew bundle
 
 print_step "> Performing Homebrew cleanup..."
