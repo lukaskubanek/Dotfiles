@@ -72,13 +72,18 @@ $ rbenv rehash
 
 #### Step 4: Symlinking Dotfiles using [Homesick](https://github.com/technicalpickles/homesick)
 
+Create a symlink from Homesick's configuration directory (`~/.homesick/repos/dotfiles`) to the local clone of this repository. When updating dotfiles, the changes are actually made to that local repository.
+
 ```bash
-$ homesick clone $(pwd)
-$ homesick symlink Configuration
-$ source ~/.zshrc
+$ ln -s <path-to-this-repository> ~/.homesick/repos/dotfiles
 ```
 
-*Note: The first command creates a symlink from `~/.homesick/repos/Configuration` to the local copy of this repository. When updating the dotfiles, the changes are actually made to that local repository.*
+Apply the symlinks. When asked to override an existing directory, type `n`. This is a [bug in Homesick](https://github.com/technicalpickles/homesick/issues/120).
+
+```bash
+$ homesick symlink
+$ source ~/.zshrc
+```
 
 #### Step 5: Terminal Theme
 
