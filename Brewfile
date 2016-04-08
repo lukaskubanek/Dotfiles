@@ -63,6 +63,7 @@ brew "dos2unix"               # DOS to Unix text file format converter
 brew "peco"                   # simplistic interactive filtering tool
 brew "youtube-dl"             # small command line program to download videos from YouTube.com
 brew "s3cmd"                  # Amazon S3 command line client
+brew "thefuck"                # command line utility for correcting mistyped commands
 
 # QuickLook Plugins
 cask "provisionql"
