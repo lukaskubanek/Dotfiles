@@ -5,6 +5,10 @@
 # Add Homebrew binaries
 PATH=/usr/local/bin:$PATH
 
+# Add MAMP bin path
+PHP_VERSION="php5.6.10"
+PATH=/Applications/MAMP/bin/php/${PHP_VERSION}/bin:$PATH
+
 # Add LaTeX binaries
 PATH=$PATH:/usr/texbin
 
