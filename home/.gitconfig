@@ -2,8 +2,8 @@
     editor = nano
     excludesfile = ~/.gitignore
 [user]
-    name = Lukas Kubanek
-    email = lukas.kubanek@me.com
+	name = Lukas Kubanek
+	email = lukas.kubanek@me.com
 [alias]
     x = !gitx
     a = add
@@ -37,9 +37,10 @@
 [help]
 	autocorrect = 1
 [filter "lfs"]
-	clean = git-lfs clean %f
-	smudge = git-lfs smudge %f
+	process = git-lfs filter-process
 	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
 [credential]
 	helper = osxkeychain
 [commit]

@@ -8,11 +8,11 @@
 #                   Oh My ZSH Configuration
 #          https://github.com/robbyrussell/oh-my-zsh
 
-ZSH=$HOME/.oh-my-zsh                # Path to the Oh My ZSH directory
-ZSH_CUSTOM=$HOME/.oh-my-zsh-custom  # Path to custom directory
-ZSH_THEME="solar-panels"            # Setting custom theme
-DISABLE_UPDATE_PROMPT="true"        # Enable automatic updates without prompting
-COMPLETION_WAITING_DOTS="true"      # Enable red dots to be displayed while waiting for completion
+ZSH=$HOME/.oh-my-zsh                    # Path to the Oh My ZSH directory
+ZSH_CUSTOM=$HOME/.oh-my-zsh-custom      # Path to custom directory
+ZSH_THEME="solar-panels"                # Setting custom theme
+DISABLE_UPDATE_PROMPT="true"            # Enable automatic updates without prompting
+COMPLETION_WAITING_DOTS="true"          # Enable red dots to be displayed while waiting for completion
 
 # Enable plugins (stored in ~/.oh-my-zsh/plugins/)
 plugins=(git git-flow rbenv gem cap brew forklift)
