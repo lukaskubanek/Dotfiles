@@ -8,7 +8,6 @@ This repository contains following personal configuration files of mine:
 - definition of packages to install via Homebrew & Ruby Gems
 - custom [Oh my ZSH](https://github.com/robbyrussell/oh-my-zsh) theme *Solar Panels*
 - custom OS X Terminal theme *Solar Panels*
-- two custom keyboard layouts *Lupulus CZ* and *Lupulus EN*
 
 ## Installation
 
@@ -88,29 +87,6 @@ $ source ~/.zshrc
 #### Step 5: Terminal Theme
 
 Install the font `Menlo for Powerline` e.g. from this [Gist](https://gist.github.com/sjl/1627888#file-menlo-forpowerline-ttc-zip) and import `Solar Panels.terminal` in the Terminal’s preferences.
-
-#### Step 6: Keyboard Layouts
-
-First copy the keyboard layouts from this repository to `~/Library/Keyboard Layouts` using following script:
-
-```bash
-$ ./keyboard/install.sh
-```
-
-Then add both custom keyboard layouts in `System Preferences > Keyboard > Input Sources`. In order to remove all other system keyboard layouts further steps are necessary. Copy the current keyboard layout preferences:
-
-```bash
-$ cp ~/Library/Preferences/com.apple.HIToolbox.plist /tmp
-$ open /tmp/com.apple.HIToolbox.plist
-```
-
-Manually remove the entries for system keyboard layouts under the key `AppleEnabledInputSources` and copy the new version of the preference files to its original location:
-
-```bash
-$ cp /tmp/com.apple.HIToolbox.plist ~/Library/Preferences/
-```
-
-Finally restart the computer.
 
 ## Author
 
