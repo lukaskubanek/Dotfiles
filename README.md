@@ -1,16 +1,14 @@
-# Configuration
+# Dotfiles
 
-## What is this about?
+This repository contains following configuration of mine:
 
-This repository contains following personal configuration files of mine:
-
-- dotfiles managed by [Homesick](https://github.com/technicalpickles/homesick)
-- definition of packages to install via Homebrew & Ruby Gems
-- custom [Oh my ZSH](https://github.com/robbyrussell/oh-my-zsh) theme *Solar Panels*
+- Dotfiles managed by [Homesick](https://github.com/technicalpickles/homesick)
+- Custom *Oh My ZSH* theme called *Solar Panels*
+- Definition of packages to install via Homebrew & Ruby Gems
 
 ## Installation
 
-The following guide describes how to apply this configuration while setting up an OS X computer from scratch.
+The following guide describes how to apply this configuration while setting up a macOS computer from scratch.
 
 #### Step 1: [Oh My ZSH](https://github.com/robbyrussell/oh-my-zsh)
 
@@ -43,8 +41,8 @@ $ ./packages/brew-bundle.sh
 Install [rbenv](https://github.com/sstephenson/rbenv):
 
 ```bash
-$ rbenv install 2.0.0-p195
-$ rbenv global 2.0.0-p195
+$ rbenv install 2.4.2
+$ rbenv global 2.4.2
 ```
 
 Since `rbenv` is not yet loaded using `.zshrc` it is necessary to load it manually in the shell:
@@ -82,7 +80,3 @@ Apply the symlinks. When asked to override an existing directory, type `n`. This
 $ homesick symlink
 $ source ~/.zshrc
 ```
-
-## Author
-
-Lukas Kubanek // [lukaskubanek.com](http://lukaskubanek.com) // [@kubanekl](https://twitter.com/kubanekl)
