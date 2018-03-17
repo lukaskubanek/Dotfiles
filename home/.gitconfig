@@ -2,8 +2,8 @@
     editor = nano
     excludesfile = ~/.gitignore
 [user]
-	name = Lukas Kubanek
-	email = lukas.kubanek@me.com
+    name = Lukas Kubanek
+    email = lukas.kubanek@me.com
 [alias]
     x = !gitx
     a = add
@@ -24,7 +24,7 @@
 [color]
     ui = auto
 [push]
-	default = matching
+    default = matching
 [diff]
     tool = icdiff
 [difftool]
@@ -32,16 +32,16 @@
 [difftool "icdiff"]
     cmd = icdiff --highlight --line-numbers \"$LOCAL\" \"$REMOTE\" | less
 [filter "media"]
-	clean = git-media-clean %f
-	smudge = git-media-smudge %f
+    clean = git-media-clean %f
+    smudge = git-media-smudge %f
 [help]
-	autocorrect = 1
+    autocorrect = 1
 [filter "lfs"]
-	process = git-lfs filter-process
-	required = true
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
 [credential]
-	helper = osxkeychain
+    helper = osxkeychain
 [commit]
-	gpgsign = false
+    gpgsign = false
