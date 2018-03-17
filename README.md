@@ -7,7 +7,6 @@ This repository contains following personal configuration files of mine:
 - dotfiles managed by [Homesick](https://github.com/technicalpickles/homesick)
 - definition of packages to install via Homebrew & Ruby Gems
 - custom [Oh my ZSH](https://github.com/robbyrussell/oh-my-zsh) theme *Solar Panels*
-- custom OS X Terminal theme *Solar Panels*
 
 ## Installation
 
@@ -83,10 +82,6 @@ Apply the symlinks. When asked to override an existing directory, type `n`. This
 $ homesick symlink
 $ source ~/.zshrc
 ```
-
-#### Step 5: Terminal Theme
-
-Install the font `Menlo for Powerline` e.g. from this [Gist](https://gist.github.com/sjl/1627888#file-menlo-forpowerline-ttc-zip) and import `Solar Panels.terminal` in the Terminal’s preferences.
 
 ## Author
 
