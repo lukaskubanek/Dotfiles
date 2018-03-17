@@ -31,10 +31,6 @@ brew "xcproj"
 brew "swiftgen"
 brew "swiftlint"
 brew "sourcekitten"
-brew "mogenerator"            # Core Data code generator
-
-# PHP & WordPress
-brew "wp-cli"                 # WordPress command line interface
 
 # Git
 brew "git"
