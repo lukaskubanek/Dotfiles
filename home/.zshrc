@@ -15,7 +15,7 @@ DISABLE_UPDATE_PROMPT="true"            # Enable automatic updates without promp
 COMPLETION_WAITING_DOTS="true"          # Enable red dots to be displayed while waiting for completion
 
 # Enable plugins (stored in ~/.oh-my-zsh/plugins/)
-plugins=(git git-flow rbenv gem cap brew forklift)
+plugins=(git git-flow rbenv gem brew forklift swiftpm osx)
 
 # Load other shell dotfiles
 dotfiles=(aliases functions path)
