@@ -30,5 +30,8 @@ unset DOTFILE_PATH
 # Load rbenv
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
+# Set language to English
+export LANG=en_US
+
 # ...and finally load Oh My ZSH!
 source $ZSH/oh-my-zsh.sh
